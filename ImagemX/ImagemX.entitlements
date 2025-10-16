@@ -11,6 +11,8 @@
 		<string>TAG</string>
 	</array>
 	<key>com.apple.security.application-groups</key>
-	<array/>
+	<array>
+		<string>group.com.jfelipeschwaab.com.Aqua</string>
+	</array>
 </dict>
 </plist>
