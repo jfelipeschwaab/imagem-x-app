@@ -9,9 +9,15 @@ import SwiftUI
 import CoreNFC
 
 struct coreNFCView: View {
-    var nfcReader: NFCReader = NFCReader()
+    @StateObject var nfcReader: NFCReader = NFCReader()
     
     var body: some View {
+        
+        if (nfcReader.tagDetected) {
+            Image("monke")
+                .resizable()
+        }
+        
         Button("NFC") {
             nfcReader.beginScanning()
         }
