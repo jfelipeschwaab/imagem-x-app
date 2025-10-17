@@ -11,7 +11,7 @@ import SwiftUI
 struct ImagemXApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SharePhotoView()
         }
     }
 }
