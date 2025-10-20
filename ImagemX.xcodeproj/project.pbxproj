@@ -273,6 +273,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImagemX/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Este app usa Bluetooth para conectar e enviar dados entre dispositivos.\n";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Este app precisa anunciar serviços Bluetooth para outros dispositivos\n";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -286,7 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jfelipeschwaab.com.ImagemX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Imagem X Provisioning Profile 2";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Imagem X Provisioning Profile 4";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,6 +309,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImagemX/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Este app usa Bluetooth para conectar e enviar dados entre dispositivos.\n";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Este app precisa anunciar serviços Bluetooth para outros dispositivos\n";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jfelipeschwaab.com.ImagemX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Imagem X Provisioning Profile 2";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Imagem X Provisioning Profile 4";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
