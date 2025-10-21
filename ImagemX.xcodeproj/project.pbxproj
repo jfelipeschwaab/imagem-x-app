@@ -44,6 +44,34 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3D4855F62EA80E6300CEBED8 /* Exceptions for "ImagemX" folder in "ImagemX" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				ContentView.swift,
+				ImagemXApp.swift,
+				Notification/CustomAppDelegate.swift,
+				Notification/NotificationFeatureView.swift,
+				"Notification/NotificationName+Extension.swift",
+				Notification/SurpresaView.swift,
+				Widgets/UnblurredImageView.swift,
+				Widgets/WidgetFeatureView.swift,
+			);
+			target = 8E2C9A4D2EA1640B00899CE7 /* ImagemX */;
+		};
+		3D4855F72EA80E6300CEBED8 /* Exceptions for "ImagemX" folder in "ImagemWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContentView.swift,
+				ImagemXApp.swift,
+				Info.plist,
+				Notification/CustomAppDelegate.swift,
+				Notification/NotificationFeatureView.swift,
+				"Notification/NotificationName+Extension.swift",
+				Notification/SurpresaView.swift,
+			);
+			target = 3D56DB542EA6698A0067E9B1 /* ImagemWidgetExtension */;
+		};
 		3D56DB6E2EA6698C0067E9B1 /* Exceptions for "ImagemWidget" folder in "ImagemWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -51,38 +79,24 @@
 			);
 			target = 3D56DB542EA6698A0067E9B1 /* ImagemWidgetExtension */;
 		};
-		3D56DB702EA66E4F0067E9B1 /* Exceptions for "ImagemX" folder in "ImagemWidgetExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Assets.xcassets,
-			);
-			target = 3D56DB542EA6698A0067E9B1 /* ImagemWidgetExtension */;
-		};
-		8E8E853D2EA16A63004D5CF1 /* Exceptions for "ImagemX" folder in "ImagemX" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 8E2C9A4D2EA1640B00899CE7 /* ImagemX */;
-		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		3D4855EE2EA80E6300CEBED8 /* ImagemX */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3D4855F62EA80E6300CEBED8 /* Exceptions for "ImagemX" folder in "ImagemX" target */,
+				3D4855F72EA80E6300CEBED8 /* Exceptions for "ImagemX" folder in "ImagemWidgetExtension" target */,
+			);
+			path = ImagemX;
+			sourceTree = "<group>";
+		};
 		3D56DB5B2EA6698A0067E9B1 /* ImagemWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				3D56DB6E2EA6698C0067E9B1 /* Exceptions for "ImagemWidget" folder in "ImagemWidgetExtension" target */,
 			);
 			path = ImagemWidget;
-			sourceTree = "<group>";
-		};
-		8E2C9A502EA1640B00899CE7 /* ImagemX */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				8E8E853D2EA16A63004D5CF1 /* Exceptions for "ImagemX" folder in "ImagemX" target */,
-				3D56DB702EA66E4F0067E9B1 /* Exceptions for "ImagemX" folder in "ImagemWidgetExtension" target */,
-			);
-			path = ImagemX;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -119,10 +133,10 @@
 		8E2C9A452EA1640B00899CE7 = {
 			isa = PBXGroup;
 			children = (
-				8E2C9A502EA1640B00899CE7 /* ImagemX */,
 				3D56DB5B2EA6698A0067E9B1 /* ImagemWidget */,
 				3D56DB562EA6698A0067E9B1 /* Frameworks */,
 				8E2C9A4F2EA1640B00899CE7 /* Products */,
+				3D4855EE2EA80E6300CEBED8 /* ImagemX */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +165,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				3D4855EE2EA80E6300CEBED8 /* ImagemX */,
 				3D56DB5B2EA6698A0067E9B1 /* ImagemWidget */,
 			);
 			name = ImagemWidgetExtension;
@@ -173,9 +188,6 @@
 			);
 			dependencies = (
 				3D56DB682EA6698C0067E9B1 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				8E2C9A502EA1640B00899CE7 /* ImagemX */,
 			);
 			name = ImagemX;
 			packageProductDependencies = (

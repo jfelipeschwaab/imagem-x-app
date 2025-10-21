@@ -25,18 +25,13 @@ struct ImagemXApp: App {
                 }
             }
             .onAppear {
-                 // appDelegate.app = self // Esta linha não é mais necessária
             }
-            // 4. Ouve pela notificação interna postada pelo AppDelegate
             .onReceive(NotificationCenter.default.publisher(for: .showSurpresa)) { _ in
                 
-                // 5. Navega para a SurpresaView
                 print("Recebido post .showSurpresa, navegando...")
                 
-                // Limpa a pilha de navegação (caso já esteja em outra tela)
                 navigationPath = NavigationPath()
                 
-                // Adiciona o identificador "surpresa" ao caminho
                 navigationPath.append("surpresa")
             }
         }
