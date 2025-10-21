@@ -54,28 +54,24 @@ struct CoreBluetoothView: View {
                             .buttonStyle(BorderlessButtonStyle())
                         }
                     }
-                    
                 } else {
                     Text("Centrais conectadas")
                         .font(.headline)
-                    if(viewModel.connectedCentrals.isEmpty) {
+                    if viewModel.connectedCentrals.isEmpty {
                         VStack{
                             Text("Aguardando conexão")
                             ProgressView()
                         }
                     } else {
-                        List(viewModel.connectedCentrals, id: \.identifier) { central in
                             VStack {
-                                Text("Conectado a \(central.description). Toma!")
+                                Text("Conectado. Toma!")
                                 Image("mamaco")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(maxWidth: .infinity, maxHeight: 500)
                             }
-                        }
                     }
                 }
-                
                 Spacer()
             }
             .padding()

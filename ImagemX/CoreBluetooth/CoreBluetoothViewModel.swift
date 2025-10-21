@@ -13,8 +13,8 @@ class CoreBluetoothViewModel: NSObject, ObservableObject {
     @Published var discoveredPeripherals: [CBPeripheral] = []
     @Published var connectedPeripheral: CBPeripheral?
     @Published var connectedCentrals: [CBCentral] = []
-    var centralManager: CBCentralManager
-    var peripheralManager: CBPeripheralManager
+    @Published var centralManager: CBCentralManager
+    @Published var peripheralManager: CBPeripheralManager
     
     var peripheral: CBPeripheral?
     var characteristic: CBCharacteristic?
@@ -67,11 +67,17 @@ class CoreBluetoothViewModel: NSObject, ObservableObject {
     }
     
     func desconnect(peripheral: CBPeripheral) {
-        if let peripheral = self.peripheral {
-            centralManager.cancelPeripheralConnection(peripheral)
+        centralManager.cancelPeripheralConnection(peripheral)
+        
+        if self.peripheral?.identifier == peripheral.identifier {
             self.peripheral = nil
             connectedPeripheral = nil
+            print("teste")
         }
+        
+        connectedCentrals.removeAll()
+        
+        
     }
 }
 
@@ -142,6 +148,11 @@ extension CoreBluetoothViewModel: CBPeripheralDelegate {
         }
     }
     
+    func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didUnsubscribeFrom characteristic: CBCharacteristic) {
+        connectedCentrals.removeAll() {$0.identifier == central.identifier}
+        
+    }
+    
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         if let error = error {
             print("Não é possível descobir nada: \(error.localizedDescription)")
@@ -153,7 +164,6 @@ extension CoreBluetoothViewModel: CBPeripheralDelegate {
             
             return
         }
-        
         
         service.characteristics?.forEach{ characteristic in
             guard characteristic.uuid ==  self.characteristicUUID else { return}
