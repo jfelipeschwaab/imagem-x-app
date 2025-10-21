@@ -13,6 +13,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 20) {
+            
             Image(systemName: "photo.on.rectangle.angled")
                 .font(.largeTitle)
                 .imageScale(.large)
@@ -22,6 +23,18 @@ struct ContentView: View {
             Text("Toque no widget para ver a imagem nítida.")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
+            
+            Button(action: dispararSurpresa) {
+                Image(systemName: "paperplane.fill")
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .padding(14)
+                    .background(Color.pink)
+                    .clipShape(Circle())
+                    .shadow(radius: 3)
+            }
+            .padding(.top, 10) 
+            
         }
         .padding()
         .onOpenURL { incomingURL in
@@ -31,6 +44,19 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showUnblurredImage) {
             UnblurredImageView()
+        }
+        .task {
+            do {
+                let request = try await UNUserNotificationCenter.current()
+                    .requestAuthorization(options: [.alert, .badge, .sound])
+                if request {
+                    print("Permissão aprovada")
+                } else {
+                    print("Permissão negada")
+                }
+            } catch {
+                print("Falha ao pedir solicitação \(error.localizedDescription)")
+            }
         }
     }
 }
