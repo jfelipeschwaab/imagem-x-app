@@ -8,6 +8,7 @@
 
 import SwiftUI
 import FoundationModels
+internal import Combine
 
 struct Message: Identifiable {
     

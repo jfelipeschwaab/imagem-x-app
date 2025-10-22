@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreNFC
+internal import Combine
 
 class NFCReader: NSObject, ObservableObject, NFCTagReaderSessionDelegate {
     @Published var tagDetected: Bool = false

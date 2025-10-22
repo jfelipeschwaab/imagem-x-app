@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreBluetooth
+internal import Combine
 
 class CoreBluetoothViewModel: NSObject, ObservableObject {
     @Published var bleMode: BLEMode?
