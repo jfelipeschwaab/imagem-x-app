@@ -44,7 +44,7 @@ struct CoreBluetoothView: View {
                             Spacer()
                             Button(viewModel.connectedPeripheral != nil ? "Desconectar" : "Conectar") {
                                 if viewModel.connectedPeripheral == peripheral {
-                                    viewModel.desconnect(peripheral: peripheral)
+                                    viewModel.disconnect(peripheral: peripheral)
                                     selectedPeripheral = nil
                                 } else {
                                     viewModel.connect(peripheral: peripheral)

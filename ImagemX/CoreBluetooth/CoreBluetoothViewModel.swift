@@ -66,18 +66,14 @@ class CoreBluetoothViewModel: NSObject, ObservableObject {
         connectedPeripheral = peripheral
     }
     
-    func desconnect(peripheral: CBPeripheral) {
+    func disconnect(peripheral: CBPeripheral) {
         centralManager.cancelPeripheralConnection(peripheral)
         
         if self.peripheral?.identifier == peripheral.identifier {
             self.peripheral = nil
             connectedPeripheral = nil
-            print("teste")
         }
-        
         connectedCentrals.removeAll()
-        
-        
     }
 }
 
@@ -92,9 +88,6 @@ extension CoreBluetoothViewModel: CBCentralManagerDelegate {
         if !discoveredPeripherals.contains(peripheral) {
             discoveredPeripherals.append(peripheral)
         }
-        
-//        centralManager.connect(peripheral, options: nil)
-//        self.peripheral = peripheral
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
@@ -108,18 +101,18 @@ extension CoreBluetoothViewModel: CBPeripheralManagerDelegate {
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         guard peripheral.state == .poweredOn, bleMode == .send else { return }
 
-        let characteristic = CBMutableCharacteristic(type: self.characteristicUUID,
-                                                     properties: [.write, .notify],
-                                                     value: nil,
-                                                     permissions: .writeable)
-        
-        let service = CBMutableService(type: self.serviceUUID, primary: true)
-        service.characteristics = [characteristic]
-        
-        peripheralManager.add(service)
-        
-        peripheralManager.startAdvertising([CBAdvertisementDataServiceUUIDsKey: serviceUUID,
-                                                        CBAdvertisementDataLocalNameKey: "Device Information"])
+//        let characteristic = CBMutableCharacteristic(type: self.characteristicUUID,
+//                                                     properties: [.write, .notify],
+//                                                     value: nil,
+//                                                     permissions: .writeable)
+//        
+//        let service = CBMutableService(type: self.serviceUUID, primary: true)
+//        service.characteristics = [characteristic]
+//        
+//        peripheralManager.add(service)
+//        
+//        peripheralManager.startAdvertising([CBAdvertisementDataServiceUUIDsKey: serviceUUID,
+//                                                        CBAdvertisementDataLocalNameKey: "Device Information"])
     }
 }
 
