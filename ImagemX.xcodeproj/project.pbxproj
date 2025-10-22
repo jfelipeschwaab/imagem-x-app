@@ -273,6 +273,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImagemX/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Aceita o scan de NFC ai po";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Este app usa Bluetooth para conectar e enviar dados entre dispositivos.\n";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Este app precisa anunciar serviços Bluetooth para outros dispositivos\n";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -309,6 +310,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImagemX/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Aceita o scan de NFC ai po";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Este app usa Bluetooth para conectar e enviar dados entre dispositivos.\n";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Este app precisa anunciar serviços Bluetooth para outros dispositivos\n";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
