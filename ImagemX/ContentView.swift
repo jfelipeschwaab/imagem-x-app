@@ -2,20 +2,26 @@
 //  ContentView.swift
 //  ImagemX
 //
-//  Created by João Felipe Schwaab on 16/10/25.
+//  Created by Pedro Santo on 21/10/25.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            
+            WidgetFeatureView()
+                .tabItem {
+                    Label("Widget", systemImage: "photo.on.rectangle.angled")
+                }
+            
+            NotificationFeatureView()
+                .tabItem {
+                    Label("Notificação", systemImage: "paperplane.fill")
+                }
         }
-        .padding()
     }
 }
 
