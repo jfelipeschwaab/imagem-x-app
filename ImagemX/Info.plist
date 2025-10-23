@@ -6,6 +6,16 @@
 	<array>
 		<string>_imagemx-mpc._tcp</string>
 		<string>_imagemx-mpc._udp</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>imagemx</string>
+			</array>
+		</dict>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
