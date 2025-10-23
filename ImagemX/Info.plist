@@ -6,6 +6,7 @@
 	<array>
 		<string>_imagemx-mpc._tcp</string>
 		<string>_imagemx-mpc._udp</string>
+    </array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>

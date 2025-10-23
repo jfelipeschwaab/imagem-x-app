@@ -39,7 +39,7 @@ class MCManager: NSObject, ObservableObject {
 }
 
 extension MCManager {
-    func send(_ dados: Data? = UIImage(named: "sus")?.pngData()){
+    func send(_ dados: Data? = UIImage(named: "ImageX")?.pngData()){
         guard let dado = dados else {
             print("Valor inválido")
             return

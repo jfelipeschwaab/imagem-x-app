@@ -6,11 +6,51 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8E6241082EAA9FC20049B04D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6240EC2EAA9D700049B04D /* WidgetKit.framework */; };
+		8E6241092EAA9FC20049B04D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6240EE2EAA9D700049B04D /* SwiftUI.framework */; };
+		8E6241162EAA9FC30049B04D /* WidgetXExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8E6241072EAA9FC20049B04D /* WidgetXExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E6241142EAA9FC30049B04D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E2C9A462EA1640B00899CE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E6241062EAA9FC20049B04D;
+			remoteInfo = WidgetXExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8E6240FD2EAA9D710049B04D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8E6241162EAA9FC30049B04D /* WidgetXExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8E2C9A4E2EA1640B00899CE7 /* ImagemX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagemX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E6240EC2EAA9D700049B04D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		8E6240EE2EAA9D700049B04D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		8E6241072EAA9FC20049B04D /* WidgetXExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetXExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8E62411A2EAA9FC30049B04D /* Exceptions for "WidgetX" folder in "WidgetXExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8E6241062EAA9FC20049B04D /* WidgetXExtension */;
+		};
 		8E8E853D2EA16A63004D5CF1 /* Exceptions for "ImagemX" folder in "ImagemX" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -29,6 +69,14 @@
 			path = ImagemX;
 			sourceTree = "<group>";
 		};
+		8E62410A2EAA9FC20049B04D /* WidgetX */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8E62411A2EAA9FC30049B04D /* Exceptions for "WidgetX" folder in "WidgetXExtension" target */,
+			);
+			path = WidgetX;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +87,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8E6241042EAA9FC20049B04D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E6241092EAA9FC20049B04D /* SwiftUI.framework in Frameworks */,
+				8E6241082EAA9FC20049B04D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				8E2C9A502EA1640B00899CE7 /* ImagemX */,
+				8E62410A2EAA9FC20049B04D /* WidgetX */,
+				8E6240EB2EAA9D700049B04D /* Frameworks */,
 				8E2C9A4F2EA1640B00899CE7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,8 +113,18 @@
 			isa = PBXGroup;
 			children = (
 				8E2C9A4E2EA1640B00899CE7 /* ImagemX.app */,
+				8E6241072EAA9FC20049B04D /* WidgetXExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8E6240EB2EAA9D700049B04D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E6240EC2EAA9D700049B04D /* WidgetKit.framework */,
+				8E6240EE2EAA9D700049B04D /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,10 +137,12 @@
 				8E2C9A4A2EA1640B00899CE7 /* Sources */,
 				8E2C9A4B2EA1640B00899CE7 /* Frameworks */,
 				8E2C9A4C2EA1640B00899CE7 /* Resources */,
+				8E6240FD2EAA9D710049B04D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8E6241152EAA9FC30049B04D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				8E2C9A502EA1640B00899CE7 /* ImagemX */,
@@ -83,6 +154,28 @@
 			productReference = 8E2C9A4E2EA1640B00899CE7 /* ImagemX.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8E6241062EAA9FC20049B04D /* WidgetXExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E6241172EAA9FC30049B04D /* Build configuration list for PBXNativeTarget "WidgetXExtension" */;
+			buildPhases = (
+				8E6241032EAA9FC20049B04D /* Sources */,
+				8E6241042EAA9FC20049B04D /* Frameworks */,
+				8E6241052EAA9FC20049B04D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8E62410A2EAA9FC20049B04D /* WidgetX */,
+			);
+			name = WidgetXExtension;
+			packageProductDependencies = (
+			);
+			productName = WidgetXExtension;
+			productReference = 8E6241072EAA9FC20049B04D /* WidgetXExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -90,11 +183,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1640;
+				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					8E2C9A4D2EA1640B00899CE7 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					8E6241062EAA9FC20049B04D = {
+						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
 			};
@@ -113,12 +209,20 @@
 			projectRoot = "";
 			targets = (
 				8E2C9A4D2EA1640B00899CE7 /* ImagemX */,
+				8E6241062EAA9FC20049B04D /* WidgetXExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8E2C9A4C2EA1640B00899CE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E6241052EAA9FC20049B04D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +239,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8E6241032EAA9FC20049B04D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E6241152EAA9FC30049B04D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E6241062EAA9FC20049B04D /* WidgetXExtension */;
+			targetProxy = 8E6241142EAA9FC30049B04D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8E2C9A572EA1640C00899CE7 /* Debug */ = {
@@ -273,14 +392,15 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImagemX/Info.plist;
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Would you like to recieve images";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Este app usa Bluetooth para conectar e enviar dados entre dispositivos.\n";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Este app precisa anunciar serviços Bluetooth para outros dispositivos\n";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Would you like to recieve images";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,14 +430,15 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImagemX/Info.plist;
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Would you like to recieve images";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Este app usa Bluetooth para conectar e enviar dados entre dispositivos.\n";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Este app precisa anunciar serviços Bluetooth para outros dispositivos\n";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Would you like to recieve images";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +449,68 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Imagem X Provisioning Profile 4";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8E6241182EAA9FC30049B04D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q7JQ2Q58W8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetX;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfelipeschwaab.com.ImagemX.WidgetX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E6241192EAA9FC30049B04D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q7JQ2Q58W8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetX;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfelipeschwaab.com.ImagemX.WidgetX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,6 +533,15 @@
 			buildConfigurations = (
 				8E2C9A5A2EA1640C00899CE7 /* Debug */,
 				8E2C9A5B2EA1640C00899CE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E6241172EAA9FC30049B04D /* Build configuration list for PBXNativeTarget "WidgetXExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E6241182EAA9FC30049B04D /* Debug */,
+				8E6241192EAA9FC30049B04D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
