@@ -11,16 +11,24 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            
-            WidgetFeatureView()
-                .tabItem {
-                    Label("Widget", systemImage: "photo.on.rectangle.angled")
-                }
-            
-            NotificationFeatureView()
-                .tabItem {
-                    Label("Notificação", systemImage: "paperplane.fill")
-                }
+            Tab("widget", systemImage: "widget.small") {
+                WidgetFeatureView()
+            }
+            Tab ("Notification", systemImage: "bell.fill") {
+                NotificationFeatureView()
+            }
+            Tab ("CoreNFC", systemImage: "cpu.fill") {
+                coreNFCView()
+            }
+            Tab ("Core Bluetooth", systemImage: "point.3.filled.connected.trianglepath.dotted") {
+                CoreBluetoothView()
+            }
+            Tab ("Foundations", systemImage: "text.page.fill") {
+                FoundationsModelView()
+            }
+            Tab ("Multipeer", systemImage: "iphone.gen2") {
+                SharePhotoView()
+            }
         }
     }
 }
